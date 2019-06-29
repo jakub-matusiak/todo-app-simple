@@ -1,1 +1,131 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  color: #364958;
+  min-height: 100vh;
+}
+
+.header {
+  background: #98DFEA;
+  padding: 10px;
+}
+
+.header__title {
+  color: #364958;
+  font-size: 2em;
+  font-weight: 200;
+  text-align: center;
+  margin: 0;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo {
+  margin: 10px;
+}
+
+.todo__title {
+  font-size: 1.2em;
+  font-weight: 200;
+  text-align: center;
+  margin: 0;
+}
+
+.todo__container {
+  margin: 5px;
+}
+
+.todo__button {
+  background: #FFFFFF;
+  color: #364958;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  margin: 5px;
+  padding: 5px 20px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  transition: transform 150ms, -webkit-transform 150ms;
+}
+
+.todo__button:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.todo__button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.todo__icon {
+  color: #98DFEA;
+  margin: 5px;
+}
+
+.todo__warning {
+  text-align: center;
+}
+
+.todo__list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.todo__list:last-child {
+  margin-bottom: 45px;
+}
+
+.todo__item {
+  margin: 10px;
+  padding: 10px 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #98DFEA;
+  padding: 10px;
+}
+
+.footer__author {
+  color: #364958;
+  font-size: 0.8em;
+  font-weight: 200;
+  text-align: center;
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */
