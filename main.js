@@ -18,7 +18,7 @@ btnAdd.addEventListener('click', () => {
         todoContainer.removeChild(warning);
     }
 
-    i++
+    i++;
 });
 
 btnRemove.addEventListener('click', () => {
