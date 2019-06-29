@@ -2,6 +2,8 @@ const btnAdd = document.querySelector('.todo__button--add');
 const btnRemove = document.querySelector('.todo__button--remove');
 const btnClear = document.querySelector('.todo__button--clear');
 const todoList = document.querySelector('.todo__list');
+const todoContainer = document.querySelector('.todo__container');
+const warning = document.querySelector('.todo__warning');
 let i = 1;
 
 btnAdd.addEventListener('click', () => {
@@ -11,15 +13,24 @@ btnAdd.addEventListener('click', () => {
     todo.classList.add('todo__item');
     todo.classList.add(`todo__item--${i}`);
     todoList.appendChild(todo);
-    i++;
+
+    if (i == 1) {
+        todoContainer.removeChild(warning);
+    }
+
+    i++
 });
 
 btnRemove.addEventListener('click', () => {
     const todo = todoList.querySelector(`.todo__item--${i-1}`);
-    
+
     if (i > 1) {
         todoList.removeChild(todo);
         i--;
+    }
+
+    if (i == 1) {
+        todoContainer.appendChild(warning);
     }
 });
 
@@ -30,4 +41,8 @@ btnClear.addEventListener('click', () => {
         todoList.removeChild(todo);
         i = 1;
     });
+
+    if (i == 1) {
+        todoContainer.appendChild(warning);
+    }
 });
