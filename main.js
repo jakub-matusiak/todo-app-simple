@@ -50,20 +50,18 @@ btnRemove.addEventListener('click', () => {
 
     if (i == 1) {
         todoContainer.appendChild(warning);
+        localStorage.clear();
     }
 });
 
 btnClear.addEventListener('click', () => {
     const todos = todoList.querySelectorAll('.todo__item');
+    i = 1;
 
     todos.forEach((todo) => {
         todoList.removeChild(todo);
-        i = 1;
     });
 
-    if (i == 1) {
-        todoContainer.appendChild(warning);
-    }
-
+    todoContainer.appendChild(warning);
     localStorage.clear();
 });
